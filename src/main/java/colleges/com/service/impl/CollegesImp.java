@@ -1,6 +1,7 @@
 package colleges.com.service.impl;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,8 +39,12 @@ public class CollegesImp implements CollegeService{
 
 	@Override
 	public List<College> getAllCollege() {
-		
-		return null;
+		List<CollegesEnitiy> enitiys = collegesRepository.findAll();
+		return enitiys.stream().map(entity ->{
+			College college = new College();
+			BeanUtils.copyProperties(entity, college);
+			return college;
+		}).collect(Collectors.toList());
 	}
 
 	@Override

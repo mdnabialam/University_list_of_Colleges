@@ -96,7 +96,7 @@ p{
 	</form:form><br>
 	
 	
-	<a href="" style="text-decoration:none">View All Colleges</a>
+	<a href="viewColleges" style="text-decoration:none">View All Colleges</a>
 	
 </body>
 </html>

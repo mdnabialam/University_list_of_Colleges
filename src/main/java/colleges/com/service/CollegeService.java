@@ -1,7 +1,6 @@
 package colleges.com.service;
 
 import java.util.List;
-
 import colleges.com.dto.College;
 
 public interface CollegeService {

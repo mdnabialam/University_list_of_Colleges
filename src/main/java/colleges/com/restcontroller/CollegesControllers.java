@@ -28,7 +28,7 @@ public class CollegesControllers {
 	public String handSubmitBtn(@ModelAttribute("college") College c,Model model) {
 		boolean isSave=collegeService.saveCollege(c);
 		if (isSave) {
-			model.addAttribute("succMsg", "Successful Added Your College");
+			model.addAttribute("succMsg", "Successful Added Your College Name");
 		} else {
 			model.addAttribute("errMsg", " Failed Not Added Your College  ");
 		}
